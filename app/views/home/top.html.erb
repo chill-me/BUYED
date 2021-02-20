@@ -1,0 +1,34 @@
+
+<div class = "top-main">
+  <div class="main-about">
+    <p>BUYEDはみんなの「買った！」を共有するアプリです</p>
+    <p>あなたの今日買ってきたものを、ログインしてシェアしてみましょう！</p>
+  </div>
+
+  <div class="main users-login">
+    <div class="container">
+      <div class="form users-form">
+        <div class="form-body">
+          <% if @error_message %>
+            <div class="form-error">
+              <%= @error_message %>
+            </div>
+          <% end %>
+            <%= form_tag("/login") do %>
+              <p>メールアドレス</p>
+              <input name="email" value="<%= @email %>">
+              <p>パスワード</p>
+              <input type="password" name="password" value="<%= @password %>">
+              <input type="submit" value="ログイン">
+            <% end %>
+        </div>
+              <div class="signup">
+              <p>アカウントをお持ちでない場合は… <%= link_to("新規登録","/signup",class:"signup-btn") %>
+              </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+.language
+

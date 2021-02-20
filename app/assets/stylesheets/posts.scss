@@ -1,0 +1,54 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
+
+
+
+
+.posts-layout{
+    width: 100%;
+    position:absolute;
+    top: 130px;
+    background-color:rgba(125, 243, 160, 0.753);
+}
+
+h1{
+    text-align: center;
+    position: static;
+    z-index: 1;
+    padding-top:100px;
+
+}
+
+.posts-main-container{
+    width:300px;
+    padding:5px;
+    margin:10px;
+    float: left;
+    box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+}
+.posts-main-container p{
+    font-size:15px;
+    padding: 2px;
+    margin: 3px;
+}
+
+.user-icon {
+    object-fit: cover;
+    width: 40px;
+    float: left;
+}
+.user-name{
+    line-height:40px;
+}
+
+.item-img {
+    object-fit: contain;
+    width:100%;
+}
+
+
+
+
+

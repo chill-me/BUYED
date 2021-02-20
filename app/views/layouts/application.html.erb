@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BUYED</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  </head>
+
+
+  <body>
+    <header class="header" id="head_wrap">
+      <div class="header-logo">
+        <%= link_to("/") do %>
+        <img src="/BUYED logo.jpg" class= "logo">
+        <% end %>
+      </div>
+        <ul class="header-menu">
+          <% if @current_user %>
+            <li>
+            <%= @current_user.name %>
+            </li>
+          <% end %>
+            <li>
+            <%= link_to("BUYEDについて","/about",class:"li-list") %>
+            </li>
+             <li>
+            <%= link_to("投稿する","/posts/new",class:"li-list") %>
+            </li>
+            <li>
+            <%= link_to("ログアウト","/logout",{method: :post, class:"li-list"})  %> 
+            </li>
+        </ul>
+  </header>
+      <% if flash[:notice] %>
+        <div class="fade-in-flash">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+    <%= yield %>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+  </body>
+</html>
