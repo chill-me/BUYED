@@ -9,19 +9,16 @@
           </div>
             <% end %>
       
-        <%= form_tag("/posts/#{@post.id}/create", {multipart: true}) do %>
+        <%= form_tag("/posts/create", {multipart: true}) do %>
           <p>item_name</p>
           <input name="item_name" value="<%= @post.item_name %>">
           <p>image</p>
           <input name="image" type="file">
           <p>price</p>
           <input name="price" class="price" value="<%= @post.price %>">円
-          <div class="field" id="star">
-
-          </div>
           <p>Comment</p>
-          <textarea class="comment"></textarea>
-          <input type="submit" value="保存" >
+          <textarea name="comment"><%= @post.comment %></textarea>
+          <input type="submit" value="保存">
         <% end %>
         </div>
       </div>
