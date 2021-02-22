@@ -1,51 +1,29 @@
-
 <div class="posts-layout">
-    <div class="posts-main-container">
-        <img class="user-icon" src="/default-user-icon.png">
-            <div class="user-name">user-name</div>
-                <img class="item-img" src="/post_images/bag1.png">
-                <p class="date-of-purchase">購入日時</p>
-                <p class="item-name">商品名</p>
-                <p class="price">価格</p>
-                <p class="satisfaction">満足度</p>
-    </div>
-    <div class="posts-main-container">
-        <img class="user-icon" src="/default-user-icon.png">
-            <div class="user-name">user-name</div>
-                <img class="item-img" src="/post_images/bag1.png">
-                <p class="date-of-purchase">購入日時</p>
-                <p class="item-name">商品名</p>
-                <p class="price">価格</p>
-                <p class="satisfaction">満足度</p>
-    </div>
-    <div class="posts-main-container">
-        <img class="user-icon" src="/default-user-icon.png">
-            <div class="user-name">user-name</div>
-                <img class="item-img" src="/post_images/bag1.png">
-                <p class="date-of-purchase">購入日時</p>
-                <p class="item-name">商品名</p>
-                <p class="price">価格</p>
-                <p class="satisfaction">満足度</p>
-<%# -------------------------------------------------- %>
-    <% @posts.each do |post| %>
-    <div class="posts-index-item">
-        <div class="post-left">
-        <img src="<%= "/user_images/#{post.user.image_name}" %>">
-        </div>
-        <div class="post-right">
-        <div class="post-user-name">
-            <%= link_to(post.user.name,"/users/#{post.user.id}")  %>
-        </div>
-        <%= link_to(post.content,"/posts/#{post.id}") %>
-        </div>      
-        </div>
+    <div class="container">
+        <% @posts.each do |post| %>
+            <div class="posts-main-container" id="test">
+                <img class="user-icon" src="/default-user-icon.png">
+                    <div class="user-name" id="user_name"><%= post.user.name %>
+                    </div>
+                        <img class="item-img" src= "<%= "/post_images/#{post.post_imgname}" %>">
+                            <div id="mask_<%= post.id %>">
+                                <div class="caption">   
+                                    <p class="date-of-purchase">投稿日時</p>
+                                    <p class="item-name">商品名：<%= post.item_name =%></p>
+                                    <p class="price">価格：<%= post.price %></p>
+                                    <p class="satisfaction">満足度</p>
+                                </div>
+                            </div>
+            </div>
     <% end %>
-
-<%# -------------------------------------------------- %>
-
-
-
-
-
     </div>
 </div>
+
+<script>
+$('.container').find('.item-img').hover(function() {
+
+    $(".mask-").css("visibility", "visible"); 
+}, function() {
+    $(".mask").css("visibility", "hidden");
+ });
+</script>
