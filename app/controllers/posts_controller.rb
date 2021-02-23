@@ -5,7 +5,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @post = Post.new
-
   end
 
   def new
@@ -13,6 +12,7 @@ class PostsController < ApplicationController
   end
 
   def create
+      @posts = Post.all
       @post = Post.new(
       user_id:  @current_user.id,
       item_name: params[:item_name],

@@ -1,29 +1,63 @@
 <div class="posts-layout">
     <div class="container">
         <% @posts.each do |post| %>
-            <div class="posts-main-container" id="test">
+            <div class="posts-main-container">
                 <img class="user-icon" src="/default-user-icon.png">
                     <div class="user-name" id="user_name"><%= post.user.name %>
-                    </div>
-                        <img class="item-img" src= "<%= "/post_images/#{post.post_imgname}" %>">
-                            <div id="mask_<%= post.id %>">
-                                <div class="caption">   
-                                    <p class="date-of-purchase">投稿日時</p>
-                                    <p class="item-name">商品名：<%= post.item_name =%></p>
-                                    <p class="price">価格：<%= post.price %></p>
-                                    <p class="satisfaction">満足度</p>
-                                </div>
-                            </div>
-            </div>
-    <% end %>
-    </div>
-</div>
+                    </div><!--user-name-->
+                        <div id="img_container" data-target="#img-mask<%= post.id %>">
+                            <%= link_to image_tag("/post_images/#{post.post_imgname}",class:"item-img"),"/posts/#{post.id}" %>
+                                  <div class="img-mask" id="img-mask<%= post.id %>">
+                                    <div class="caption">
+                                        <p class="date-of-purchase">投稿日時</p>
+                                        <p class="item-name">商品名：<%= post.item_name =%></p>
+                                        <p class="price">価格：<%= post.price %></p>
+                                        <p class="satisfaction">満足度</p>
+                                    </div> <!--caption-->
+                                </div><!--img-mask-->
+                        </div><!--img_container-->
+            </div><!--post-main-container-->
+        <% end %>
+    </div><!--container-->
+</div><!--posts-layout-->
 
+
+# モーダルの周囲を薄暗くするマスク
+  <div id="mask" class="hidden"></div>
+# モーダル
+# あとからJavaScriptで<div>内のコードをshowビューのコードに置き換えます。
+  <div id="modal" class="hidden">
+    <p>モーダルウィンドウ<p>
+  </div>
+
+  
 <script>
-$('.container').find('.item-img').hover(function() {
 
-    $(".mask-").css("visibility", "visible"); 
-}, function() {
-    $(".mask").css("visibility", "hidden");
+$(document).on('turbolinks:load', function() {
+
+$('#img_container').hover(    
+    function() {        
+    console.log("mouse over now");
+    $($('#img_container').data('target')).css("visibility", "visible"); 
+},  
+    function() {
+    console.log("mouse move out now");
+    $($('#img_container').data('target')).css("visibility", "hidden"); 
  });
+
+});
+
+
+// $(document).on('turbolinks:load', function() {
+    
+    
+//   $('.product-image').click function(){
+//             $($(this).data('target')).fadeIn();
+//   });
+//   $('.close-modal').click(function(){
+//       $('.img-modal-wrapper').fadeOut();
+//   });
+
+//       });
+
 </script>
