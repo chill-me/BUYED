@@ -3,9 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 
-
-
-
 .posts-layout{
     width: 100%;
     position:absolute;
@@ -22,12 +19,42 @@ h1{
 }
 
 .posts-main-container{
-    width:300px;
+    width:210px;
+    height:250px;
     padding:5px;
-    margin:10px;
+    margin:15px 10px;
     float: left;
     box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-    
+}
+
+.img-container{
+    // width:200px;
+    // height:200px;
+    // object-fit: cover;
+
+}
+.item-img {
+    position: relative;
+    width:200px;
+    height:200px;
+    object-fit: cover;
+}
+
+.img-mask {
+    visibility: hidden;
+    background-color:rgba(0,0,0,0.8);	/* マスクは半透明 */
+    position: absolute;
+    z-index: 3;
+    top: 60px;
+    width: 200px;
+    height: 200px;
+    color:white;
+}
+
+.img-mask p{
+    font-size:15px;
+    padding: 1px;
+    margin: 1px;
 }
 
 .user-icon {
@@ -39,65 +66,3 @@ h1{
     line-height:40px;
 }
 
-.item-img {
-    object-fit: contain;
-    width:100%;
-    max-height:200px;
-}
-
-.caption p{
-    font-size:15px;
-    padding: 2px;
-    margin: 3px;
-    position:relative;	/* 相対位置指定 */
-}
-
-.mask {
-    visibility: hidden;
-	position:absolute;
-    // top:;
-	background-color:	rgba(0,0,0,0.4);	/* マスクは半透明 */
-}
-
-
-
-
-
-/* hiddenクラスがないとマスクとモーダルが表示される（JavaScriptでhiddenクラスを消したとき）*/
-#mask {
-    background-color: rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    z-index: 1;
-  }
-  
-  #modal {
-    position: fixed;   /* スクロールで移動しないようmodalの位置を固定します */
-    top: 10vh;
-    /* 以下3行：モーダルを左右中央揃えにする方法 */
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    transform: translate(0, 0) scale(1);
-    transition: 0.2s;   /* transitionでアニメーションを作成 */
-    z-index: 2;   /* マスクより上に重なるようにする */
-    width: 935px;   /* showビューの幅に合わせて設定 */
-  }
-  
-  /* hiddenクラスで最初は表示されないようにする */
-  #mask.hidden {
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  #modal.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transform: translate(0, 0) scale(0.8);   /* 大きさ0.8倍から等倍にモーダルが拡大される */
-  }
-
-
-  

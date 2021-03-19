@@ -2,13 +2,12 @@
   <div class="container">
     <h1 class="form-heading">投稿する</h1>
       <div class="form">
-        <div class="form-body"> 
+        <div class="form-body">
             <% if @error_message %>
           <div class="form-error">
             <%= @error_message %>
           </div>
             <% end %>
-      
         <%= form_tag("/posts/create", {multipart: true}) do %>
           <p>item_name</p>
           <input name="item_name" value="<%= @post.item_name %>">
