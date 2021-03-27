@@ -1,17 +1,19 @@
 <div class="posts-layout">
-    <div class="container">
-        <% @posts.each do |post| %>
+   <div class="container">
+       <% @posts.each do |post| %>
             <div class="posts-main-container">
                 <img class="user-icon" src="/default-user-icon.png">
                     <div class="user-name"><%= post.user.name %>
-                    </div><!--user-name-->
-                        <div class="img_container" data-target="#image<%= post.id %>">
+                    </div>
+                        <div class="img_container <%= post.id %>" data-target="#img-mask<%= post.id %>">
                             <%= link_to image_tag("/post_images/#{post.post_imgname}",class:"item-img"),"/posts/#{post.id}" %>
-                            <div class="img-mask" id="#image<%= post.id %>">
-                                <p class="date-of-purchase">date:</p>
-                                <p class="item-name">item-name：<%= post.item_name =%></p>
-                                <p class="price">price：<%= post.price %></p>
-                                <p class="satisfaction">satisfaction:</p>
+                            <div id="img-mask <%= post.id %>" class="img-mask"> 
+                                <div class="caption">
+                                    <p class="date-of-purchase">date:</p>
+                                    <p class="item-name">item-name：<%= post.item_name =%></p>
+                                    <p class="price">price：<%= post.price %></p>
+                                    <p class="satisfaction">satisfaction:</p>
+                                </div>
                             </div>
                         </div>
             </div>
@@ -21,11 +23,11 @@
 
 
 
-<script>
+<script type="text/javascript">
 $(document).on('turbolinks:load', function() {
 $('.img_container').hover(
     function() {
-    $($(this).data('target')).css("visibility","visible");
+    $($(this).data('target')).css('visibility','visible');
     console.log("mouse over now");
 },
     function() {

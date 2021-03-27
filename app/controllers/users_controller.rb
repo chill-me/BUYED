@@ -21,9 +21,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(email: params[:email],password: params[:password],name: params[:name])
     if @user.save
+      flash[:notice] = "新規登録が完了しました"
       session[:user_id] = @user.id
       redirect_to("/posts/index")
-      flash[:notice] = "新規登録が完了しました"
     else
       @email = params[:email]
       @name = params[:name]
@@ -36,14 +36,14 @@ class UsersController < ApplicationController
   def login
     @user = User.find_by(email: params[:email],password: params[:password])
     if @user
+      flash[:notice] = "ログインしました"
       session[:user_id] = @user.id
       redirect_to("/posts/index")
-      flash[:notice] = "ログインしました"
     else
-      render("/home/top")
       flash[:notice] = "メールアドレスか、パスワードに誤りがあります"
       @email = params[:email]
       @password = params[:password]
+      render("/home/top")
     end
   end
 

@@ -1,0 +1,36 @@
+<div class="posts-layout">
+    <div class="container">
+        <% @posts.each do |post| %>
+            <div class="posts-main-container">
+                <img class="user-icon" src="/default-user-icon.png">
+                    <div class="user-name"><%= post.user.name %>
+                    </div>
+                        <div class="img_container" data-target="#img-mask<%= post.id %>">
+                            <%= link_to image_tag("/post_images/#{post.post_imgname}",class:"item-img"),"/posts/#{post.id}" %>
+                            <div id="#img-mask<%= post.id %>" class="img-mask" >
+                      
+                            </div>
+                        </div>
+            </div>
+        <% end %>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(document).on('turbolinks:load', function() {
+
+$('.img_container').hover(
+    function() {
+    $($(this).data('target')).css("background-color","black");
+    console.log("mouse over now");
+},
+    function() {
+    $($(this).data('target')).css("visibility","hidden");
+    console.log("mouse move out now");
+ });
+});
+</script>
+
+
