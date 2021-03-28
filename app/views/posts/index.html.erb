@@ -1,18 +1,18 @@
 <div class="posts-layout">
+
    <div class="container">
        <% @posts.each do |post| %>
             <div class="posts-main-container">
                 <img class="user-icon" src="/default-user-icon.png">
-                    <div class="user-name"><%= post.user.name %>
-                    </div>
-                        <div class="img_container <%= post.id %>" data-target="#img-mask<%= post.id %>">
+                    <div class="user-name"><%= post.user.name %></div>
+                        <div class="img-container" data-target="#img-mask <%= post.id %>">
                             <%= link_to image_tag("/post_images/#{post.post_imgname}",class:"item-img"),"/posts/#{post.id}" %>
-                            <div id="img-mask <%= post.id %>" class="img-mask"> 
+                            <div id="img-mask <%= post.id %>" class="img-mask">
                                 <div class="caption">
-                                    <p class="date-of-purchase">date:</p>
-                                    <p class="item-name">item-name：<%= post.item_name =%></p>
-                                    <p class="price">price：<%= post.price %></p>
-                                    <p class="satisfaction">satisfaction:</p>
+                                    <p>date:</p>
+                                    <p>item-name：<%= post.item_name =%></p>
+                                    <p>price：<%= post.price %></p>
+                                    <p>satisfaction:</p>
                                 </div>
                             </div>
                         </div>
@@ -20,8 +20,13 @@
         <% end %>
     </div>
 </div>
-
-
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-body">
+      <h1>hello</h1>
+    </div>
+  </div>
+</div>
 
 <script type="text/javascript">
 $(document).on('turbolinks:load', function() {

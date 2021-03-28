@@ -13,14 +13,6 @@
  *= require_self　
  *= require_tree  
  */
-@import "bootstrap";
-
-
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
 
 
 .top-main {
@@ -29,12 +21,13 @@
     padding: 7px 100px;
     text-align: center;
     width: 100%;
-    height: auto;
+    height: 1000px;
     min-height: 100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%,cover;
+    background-position-y: 100px;
   }
-  
+
   header {
     height: 60px;
     color:#57575f;  
@@ -53,27 +46,33 @@
   }
   
   img.logo {
-    width:150px;  
+    width:130px;  
   }
   
   .header-menu {
       list-style:none;
       float: right;
-      padding:0px;
-      margin:0px;
-      line-height: 80px;
+      padding: 0px;
+      margin: 0px;
+      line-height: 50px;
       font-size: 15px;
       font-weight: 300px;
-  
-  }
-  
-  .header-menu li {
       text-decoration: none;
-      color:black;
+  }
+  .header-menu a{
+    text-decoration: none;
+  }
+  .header-menu li{
       float: left;
       margin-right: 15px;
       margin-left: 15px;
+      text-decoration: none;
   }
+  .li-list{
+    color:#57575f;
+    text-decoration: none;
+  }
+
   
   .main-about {
       font-size: 24px;
@@ -151,25 +150,21 @@
     padding:10px;
   }
   .signup {
-    margin-top:0px;
+    margin:15px 25px;
     float:right;
   }
   
   /* フラッシュ ================================ */
   .fade-in-flash{
-        // animation: fadeIn 0.9s ease 0.3s 1 normal;
-        visibility:hidden;
+    display:none;
+        text-align: center;
         margin: 0px auto;
-        padding: 10px 0;
+        padding: 15px 0;
         color: white;
         background: rgb(177, 177, 177);
-        // position: absolute;
-        // top: 80px;
-        // z-index: 10;
-        width: 500px;
+        width: 100%;
         border-radius: 20px;
-        font-size: 14px;
-        text-align: center;
+        font-size: 16px;
         animation-name: fade-in-flash; 
         animation-duration: 4s;
         animation-timing-function: ease-in-out; //easeよりスロー
@@ -178,11 +173,10 @@
   @keyframes fade-in-flash {
     from {
       opacity: 1;
-      visibility: visible;
+      display:block;
     }
     to {
       opacity: 0;
-      visibility: hidden;
-
+      display:none;
     }
   }
