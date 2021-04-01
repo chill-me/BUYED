@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   get "posts/new" => "posts#new"
   get "posts/:id" => "posts#show"
 
-
   # users
   get "signup" => "users#new"
   get "users/create" => "users#create"

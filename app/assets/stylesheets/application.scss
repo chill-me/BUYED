@@ -13,6 +13,8 @@
  *= require_self　
  *= require_tree  
  */
+ @import "font-awesome";
+
 
 
 .top-main {
@@ -66,7 +68,6 @@
       float: left;
       margin-right: 15px;
       margin-left: 15px;
-      text-decoration: none;
   }
   .li-list{
     color:#57575f;

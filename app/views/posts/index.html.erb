@@ -1,45 +1,81 @@
 <div class="posts-layout">
-
    <div class="container">
        <% @posts.each do |post| %>
             <div class="posts-main-container">
                 <img class="user-icon" src="/default-user-icon.png">
                     <div class="user-name"><%= post.user.name %></div>
-                        <div class="img-container" data-target="#img-mask <%= post.id %>">
-                            <%= link_to image_tag("/post_images/#{post.post_imgname}",class:"item-img"),"/posts/#{post.id}" %>
-                            <div id="img-mask <%= post.id %>" class="img-mask">
-                                <div class="caption">
+                         <div class="img-container" data-target="#img-modal<%= post.id %>">
+                            <img class="item-img" src=<%="/post_images/#{post.post_imgname}"%> >
+                           <!-- 
+                           <div id="img-mask <%= post.id %>" class="img-mask">
+                                <d class="caption">
                                     <p>date:</p>
                                     <p>item-name：<%= post.item_name =%></p>
                                     <p>price：<%= post.price %></p>
                                     <p>satisfaction:</p>
-                                </div>
-                            </div>
+                                </d iv>
+                            </div> 
+                            -->
                         </div>
             </div>
+                    
+                    <div id="img-modal<%= post.id %>" class="modal">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <!--modal left-->
+                                <div class="modal-left-info">
+                                    <img class="modal-img" src=<%="/post_images/#{post.post_imgname}"%>>
+                                </div>
+                                    <!--modal right-->
+                                    <div class="modal-right-info">
+                                        <img class="mo-user-icon" src="/default-user-icon.png">
+                                        <div class="mo-user-name"><%= post.user.name %></div>
+                                        <div class="some-icon"></div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
         <% end %>
     </div>
 </div>
-<div id="modal" class="modal">
-  <div class="modal-content">
-    <div class="modal-body">
-      <h1>hello</h1>
-    </div>
-  </div>
-</div>
 
-<script type="text/javascript">
-$(document).on('turbolinks:load', function() {
-$('.img_container').hover(
-    function() {
-    $($(this).data('target')).css('visibility','visible');
-    console.log("mouse over now");
-},
-    function() {
-    $($(this).data('target')).css("visibility","hidden");
-    console.log("mouse move out now");
- });
+<script>
+
+$('.img-container').click(function(e) {
+    $($(this).data('target')).fadeIn();
+    console.log("click on");
+    e.stopPropagation();
 });
+
+$(document).on('click', function(e) {
+    if (!$(e.target).closest($('.modal-content')).length) {
+        console.log("out of modal");
+        $('.modal').fadeOut();
+    }else{
+        console.log("in modal");
+    };
+});
+
+document.onkeyup = function (e) {
+    e = e || window.event;
+    // 27 is the ESC key
+    if(e.keyCode === 27) $('.modal').fadeOut();
+};
+
+// -----------------------------------------------------------------
+// $(document).on('turbolinks:load', function() {
+// $('.img_container').hover(
+//     function() {
+//     $($(this).data('target')).css('visibility','visible');
+//     console.log("mouse over now");
+// },
+//     function() {
+//     $($(this).data('target')).css("visibility","hidden");
+//     console.log("mouse move out now");
+//  });
+// });
+// -----------------------------------------------------------------
 </script>
-
-
