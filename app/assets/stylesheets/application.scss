@@ -13,10 +13,10 @@
  *= require_self　
  *= require_tree  
  */
- @import "font-awesome";
 
-
-
+html {
+  font-family: museo-slab,Georgia,"Times New Roman",Times,serif;
+}
 .top-main {
     background-image: url("amazonIMGL0450.jpg");
     color:#57575f;

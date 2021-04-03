@@ -18,25 +18,42 @@
                             -->
                         </div>
             </div>
-                    
-                    <div id="img-modal<%= post.id %>" class="modal">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <!--modal left-->
-                                <div class="modal-left-info">
-                                    <img class="modal-img" src=<%="/post_images/#{post.post_imgname}"%>>
-                                </div>
-                                    <!--modal right-->
-                                    <div class="modal-right-info">
-                                        <img class="mo-user-icon" src="/default-user-icon.png">
-                                        <div class="mo-user-name"><%= post.user.name %></div>
-                                        <div class="some-icon"></div>
-                                    </div>
+<!----------------------modaここから---------------------->
+                <div id="img-modal<%= post.id %>" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                        <!--modal left-->
+                            <div class="modal-left-info">
+                                <img class="modal-img" src=<%="/post_images/#{post.post_imgname}"%>>
                             </div>
+                        <!--modal right-->
+                                <div class="modal-right-info">
+                                        <div class="left-section">
+                                            <img class="mo-user-icon" src="/default-user-icon.png">
+                                            <div class="mo-user-name"><%= post.user.name %></div>
+                                            <span class="follow">フォローする</span>
+                                        </div>
+                                        <div class="right-section">
+                                            <div class="mo-someicon">
+                                                <i class="fas fa-pencil-alt fa-2x"></i>
+                                                <i class="fas fa-comment fa-2x"></i>
+                                                <i class="fas fa-heart fa-2x"></i>
+                                            </div>
+                                        </div>
+                        <!--info-->
+                                        <div class="mo-main-infocontainer">
+                                            <p><i class="far fa-clock"></i><%= post.created_at =%></p>
+                                            <p><i class="fa fa-shopping-bag"></i><%= post.item_name =%></p>
+                                            <p><i class="far fa-clock"></i><%= post.price %></p>
+                                            <p><i class="far fa-clock"></i></p>
+                                            <p><i class="far fa-clock"></i></p>
+
+                                        </div>
+                                </div>
                         </div>
                     </div>
-
-
+                </div>
+<!----------------------modaここまで---------------------->
 
         <% end %>
     </div>
@@ -61,7 +78,6 @@ $(document).on('click', function(e) {
 
 document.onkeyup = function (e) {
     e = e || window.event;
-    // 27 is the ESC key
     if(e.keyCode === 27) $('.modal').fadeOut();
 };
 

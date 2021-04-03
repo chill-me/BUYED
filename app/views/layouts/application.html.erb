@@ -6,13 +6,14 @@
     <%= csp_meta_tag %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
+
   </head>
-
-
   <body>
     <header>
-      <div class="header-logo">
+      <div class="header-logo"> 
         <%= link_to("/") do %>
         <img src="/BUYED logo.jpg" class= "logo">
         <% end %>
@@ -30,7 +31,7 @@
             <%= link_to("投稿一覧","/posts/index",class:"li-list") %>
             </li>
              <li>
-            <%= link_to("投稿する","/posts/new",) %>
+            <%= link_to("投稿する","/posts/new",class:"li-list") %>
             </li>
             <li>
             <%= link_to("ログアウト","/logout",{method: :post, class:"li-list"})  %> 
