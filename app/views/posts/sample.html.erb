@@ -1,0 +1,38 @@
+<% if blog.liked_by?(current_user) %>
+     <p><span>お気に入り解除: </span><%=link_to blog.likes.count, blog_likes_path(blog.id), method: :delete, remote: true %></p>
+<% else %>
+     <p><span>お気に入り登録: </span><%=link_to blog.likes.count, blog_likes_path(blog.id), method: :post, remote: true %></p>
+<% end %>
+
+
+<div class="main_contents">
+    <% @blogs.each do |blog| %>
+        <div class="blog_contents">
+          <h2><%= link_to blog.title, blog_path(blog.id) %></h2>
+          <%= blog.body %>
+
+         <!-- ↓追加(部分的に更新したい場所)↓ -->
+          <div id="likes_buttons_<%= blog.id %>">
+             <%= render partial: 'likes/like', locals: { blog: blog} %>
+          </div>
+         <!-- ↑ここまで↑ -->
+        </div>
+  <% end %>
+</div>
+
+
+<% if user_signed_in? %>
+    <% if blog.liked_by?(current_user) %>
+        <p><span>お気に入り解除: </span><%=link_to blog.likes.count, blog_likes_path(blog.id), method: :delete, remote: true %></p>
+    <% else %>
+        <p><span>お気に入り登録: </span><%=link_to blog.likes.count, blog_likes_path(blog.id), method: :post, remote: true %></p>
+    <% end %>
+<% else %>
+    <p><span>お気に入り数: </span><%= blog.likes.count %></p>
+<% end %>
+
+
+// #likes_buttons_<%= @blog.id %>この部分のHTMLだけ、renderで部分的に更新するという処理です
+$('#likes_buttons_<%= @blog.id %>').html("<%= j(render partial: 'likes/like', locals: {blog: @blog}) %>");
+
+$('#likes_buttons_<%= @blog.id %>').html("<%= j(render partial: 'likes/like', locals: {blog: @blog}) %>");

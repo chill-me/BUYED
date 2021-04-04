@@ -5,8 +5,6 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @post = Post.new
-    @posts_json = @posts.to_json.html_safe
-
   end
 
   def new
