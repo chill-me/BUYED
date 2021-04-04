@@ -18,7 +18,7 @@
                             -->
                         </div>
             </div>
-<!----------------------modaここから---------------------->
+<!----------------------modal---------------------->
                 <div id="img-modal<%= post.id %>" class="modal">
                     <div class="modal-content">
                         <div class="modal-body">
@@ -36,24 +36,24 @@
                                         <div class="right-section">
                                             <div class="mo-someicon">
                                                 <i class="fas fa-pencil-alt fa-2x"></i>
-                                                <i class="fas fa-comment fa-2x"></i>
-                                                <i class="fas fa-heart fa-2x"></i>
+                                                <i class="far fa-comment fa-2x"></i>
+                                                <i class="far fa-heart fa-2x"></i>
                                             </div>
                                         </div>
                         <!--info-->
                                         <div class="mo-main-infocontainer">
+                                            <p><i class="fa fa-tags"></i></p>
                                             <p><i class="far fa-clock"></i><%= post.created_at =%></p>
                                             <p><i class="fa fa-shopping-bag"></i><%= post.item_name =%></p>
-                                            <p><i class="far fa-clock"></i><%= post.price %></p>
-                                            <p><i class="far fa-clock"></i></p>
-                                            <p><i class="far fa-clock"></i></p>
-
+                                            <p><i class="fa fa-money"></i>¥<%= post.price %></p>
+                                            <p><i class="fa fa-star-half-empty"></i></p>
+                                            <p><i class="fa fa-pencil-square-o"></i></p>
                                         </div>
                                 </div>
                         </div>
                     </div>
                 </div>
-<!----------------------modaここまで---------------------->
+<!----------------------modal---------------------->
 
         <% end %>
     </div>
