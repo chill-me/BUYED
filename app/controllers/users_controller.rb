@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  
-  
+
+  before_action :set_current_user
+
   def index
   end
 
@@ -12,7 +13,6 @@ class UsersController < ApplicationController
     redirect_to("/")
     flash[:notice] = "ログアウトしました"
   end
-
 
   def new
     @user = User.new

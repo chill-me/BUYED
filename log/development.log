@@ -49175,3 +49175,2723 @@ ActionView::Template::Error (undefined local variable or method `blog' for #<#<C
   
 app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__994728733_122650020'
 app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__994728733_122650020'
+Started GET "/posts/index" for ::1 at 2021-04-05 00:06:34 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (531.6ms)
+Completed 500 Internal Server Error in 556ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `blog' for #<#<Class:0x000000000e9ef3a0>:0x000000000dfc0d98>):
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <!--
+    41:                                                 <% if blog.liked_by?(current_user) %>
+    42:                                                     <p><i class="far fa-heart fa-2x"></i><%=link_t  o blog.likes.count, post_likes_path(like.id), method: :delete, remote: true %></p>
+    43:                                                 <% else %>
+    44:                                                     <p><span>お気に入り登録: </span><%=link_to blog.likes.count, blog_likes_path(like.id), method: :post, remote: true %></p>
+  
+app/views/posts/index.html.erb:41:in `block in _app_views_posts_index_html_erb__994728733_117312360'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__994728733_117312360'
+Started GET "/posts/index" for ::1 at 2021-04-05 00:07:21 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 127ms (Views: 120.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-05 00:07:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-05 00:09:18 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 399ms (Views: 387.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-05 00:09:18 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-06 15:52:58 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 2197ms (Views: 2163.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-06 15:53:00 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2021-04-06 15:53:02 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aniABb_-GAvXv_LXO9xORJBYW3BeNGwMmddofBoOywCKwSHAdlYESUk4qHJFTHhv9bE08WpRAioX2Ttul3qOtw", "email"=>"chirumi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "chirumi@buyed.com"], ["password", "chirumichirumi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 19ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-06 15:53:02 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (C:/Users/1/BUYED/app/views/posts/index.html.erb:40: syntax error, unexpected ')', expecting then or ';' or '\n'
+... post.liked_by?(post.user_id) );@output_buffer.safe_append='
+...                              ^
+C:/Users/1/BUYED/app/views/posts/index.html.erb:42: syntax error, unexpected else
+...ze;@output_buffer.append=( else );@output_buffer.safe_append...
+...                           ^~~~
+C:/Users/1/BUYED/app/views/posts/index.html.erb:61: syntax error, unexpected end, expecting ')'
+'.freeze;         end 
+                  ^~~
+C:/Users/1/BUYED/app/views/posts/index.html.erb:103: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+C:/Users/1/BUYED/app/views/posts/index.html.erb:105: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/index.html.erb:40: syntax error, unexpected ')', expecting then or ';' or '\n'
+app/views/posts/index.html.erb:42: syntax error, unexpected else
+app/views/posts/index.html.erb:61: syntax error, unexpected end, expecting ')'
+app/views/posts/index.html.erb:103: syntax error, unexpected ensure, expecting ')'
+app/views/posts/index.html.erb:105: syntax error, unexpected end, expecting ')'
+Started GET "/posts/index" for ::1 at 2021-04-06 15:53:34 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (24.2ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `user_id' for 4:Integer):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(post.user_id) %>
+    41:                                                 <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                 <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/models/post.rb:11:in `liked_by?'
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__165043753_77765940'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__165043753_77765940'
+Started GET "/posts/index" for ::1 at 2021-04-06 17:30:21 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 5.3ms)
+
+
+  
+NoMethodError (undefined method `before_action' for #<Class:0x00000000090cab80>
+Did you mean?  before_commit):
+  
+app/models/post.rb:6:in `<class:Post>'
+app/models/post.rb:1:in `<main>'
+app/controllers/posts_controller.rb:6:in `index'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:00:03 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 3.0ms)
+
+
+  
+NoMethodError (undefined method `before_action' for #<Class:0x0000000009e9ae90>
+Did you mean?  before_commit):
+  
+app/models/post.rb:6:in `<class:Post>'
+app/models/post.rb:1:in `<main>'
+app/controllers/posts_controller.rb:6:in `index'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:03:52 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (411.0ms)
+Completed 500 Internal Server Error in 456ms (ActiveRecord: 4.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000009eea800>:0x0000000009ee8d98>
+Did you mean?  @current_user):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_83319360'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_83319360'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:04:39 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (333.4ms)
+Completed 500 Internal Server Error in 384ms (ActiveRecord: 4.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000009927738>:0x0000000009925d48>
+Did you mean?  @current_user):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_80297860'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_80297860'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:04:43 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (310.4ms)
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000009927738>:0x00000000091245b8>
+Did you mean?  @current_user):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_76097380'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_76097380'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:04:45 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (289.2ms)
+Completed 500 Internal Server Error in 304ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000009927738>:0x0000000008a4d6e0>
+Did you mean?  @current_user):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_72511460'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_72511460'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:05:19 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (315.3ms)
+Completed 500 Internal Server Error in 336ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `c_user' for #<#<Class:0x0000000009927738>:0x000000000872a7d8>):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(c_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_70867980'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_70867980'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:09:48 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (297.4ms)
+Completed 500 Internal Server Error in 315ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `c_user' for #<#<Class:0x0000000009927738>:0x0000000007eb4400>):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(c_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_66430580'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_66430580'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:21:30 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (319.4ms)
+Completed 500 Internal Server Error in 385ms (ActiveRecord: 5.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00000000093f40e0>:0x0000000009412108>
+Did you mean?  @current_user):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_77571240'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_77571240'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:21:38 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (23.1ms)
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `likes' for #<Post:0x0000000009b313d0>):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/models/post.rb:11:in `liked_by?'
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_80789640'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_80789640'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:21:53 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered posts/index.html.erb within layouts/application (314.1ms)
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00000000067e92c0>:0x00000000067fabd8>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_54481920'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_54481920'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:25:22 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered posts/index.html.erb within layouts/application (351.5ms)
+Completed 500 Internal Server Error in 447ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000005f81fd8>:0x0000000006b55a80>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_48908660'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_48908660'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:25:27 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered posts/index.html.erb within layouts/application (324.9ms)
+Completed 500 Internal Server Error in 345ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000005f81fd8>:0x00000000086a8148>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_70600320'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_70600320'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:25:48 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered posts/index.html.erb within layouts/application (342.4ms)
+Completed 500 Internal Server Error in 398ms (ActiveRecord: 10.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000009e1cdd8>:0x0000000009e269c8>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_82897880'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_82897880'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:26:14 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (402.8ms)
+Completed 500 Internal Server Error in 503ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000008c0b9f0>:0x0000000008c08430>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_73270440'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_73270440'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:26:28 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (372.8ms)
+Completed 500 Internal Server Error in 460ms (ActiveRecord: 5.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00000000098fed10>:0x00000000098fd348>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_80214920'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_80214920'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:33:55 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (318.0ms)
+Completed 500 Internal Server Error in 388ms (ActiveRecord: 12.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x00000000093dedd0>:0x00000000093dcb48>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_77528660'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_77528660'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:36:21 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (430.0ms)
+Completed 500 Internal Server Error in 530ms (ActiveRecord: 6.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x000000000765aa48>:0x00000000076616b8>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_54576580'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_54576580'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:39:38 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (311.3ms)
+Completed 500 Internal Server Error in 335ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x000000000765aa48>:0x00000000084e6788>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_69657260'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_69657260'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:40:47 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (350.7ms)
+Completed 500 Internal Server Error in 411ms (ActiveRecord: 7.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000009339f60>:0x0000000007bd6260>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                 <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                 <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_77190480'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_77190480'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:42:37 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (322.9ms)
+Completed 500 Internal Server Error in 343ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000009339f60>:0x00000000086a9110>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__1004298101_70602420'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__1004298101_70602420'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:56:48 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (403.1ms)
+Completed 500 Internal Server Error in 472ms (ActiveRecord: 6.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x000000000871c4d0>:0x0000000008817bf0>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_71332120'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_71332120'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:56:53 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (352.1ms)
+Completed 500 Internal Server Error in 371ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x000000000871c4d0>:0x0000000009cc1600>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_82186080'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_82186080'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:56:55 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (338.9ms)
+Completed 500 Internal Server Error in 356ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x000000000871c4d0>:0x000000000883eea8>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_71410920'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_71410920'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:56:57 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (337.7ms)
+Completed 500 Internal Server Error in 353ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x000000000871c4d0>:0x000000000768d7e0>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_52822380'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_52822380'
+Started GET "/posts/index" for ::1 at 2021-04-06 18:56:59 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (381.9ms)
+Completed 500 Internal Server Error in 415ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x000000000871c4d0>:0x00000000077c0900>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_62630420'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_62630420'
+Started GET "/" for ::1 at 2021-04-06 19:00:42 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 565ms (Views: 558.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-06 19:00:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2021-04-06 19:00:44 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jz4T6yFCZUN-SUiH8xywjjSv6eAU4em4b0ZVshGTTDUltnhuQYikbfjldqdqJLUykqMan_U6Ssg_UYzJ_UhxBg", "email"=>"chirumi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "chirumi@buyed.com"], ["password", "chirumichirumi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:38
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-06 19:00:44 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (330.0ms)
+Completed 500 Internal Server Error in 349ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x000000000871c4d0>:0x0000000009ea5d68>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_83179940'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_83179940'
+Started GET "/posts/index" for ::1 at 2021-04-06 19:04:46 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (334.7ms)
+Completed 500 Internal Server Error in 392ms (ActiveRecord: 4.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x000000000d8ffbd0>:0x000000000d8fe230>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_113746420'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_113746420'
+Started GET "/users/sign_in" for ::1 at 2021-04-06 19:05:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_in"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-06 19:06:30 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (548.1ms)
+Completed 500 Internal Server Error in 627ms (ActiveRecord: 5.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000009fae598>:0x000000000c7873a8>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_114142640'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_114142640'
+Started GET "/posts/index" for ::1 at 2021-04-06 19:11:03 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 9.6ms)
+
+
+  
+SyntaxError (C:/Users/1/BUYED/app/views/posts/index.html.erb:40: syntax error, unexpected '<', expecting ')'
+...  '.freeze; if post.liked_by?(<% current_user ;@output_buffe...
+...                              ^
+C:/Users/1/BUYED/app/views/posts/index.html.erb:42: else without rescue is useless
+...                           else 
+...                           ^~~~
+C:/Users/1/BUYED/app/views/posts/index.html.erb:104: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/posts/index.html.erb:40: syntax error, unexpected '<', expecting ')'
+app/views/posts/index.html.erb:42: else without rescue is useless
+app/views/posts/index.html.erb:104: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/posts/index" for ::1 at 2021-04-06 19:16:58 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (61.2ms)
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 6.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/models/post.rb:10:in `liked_by?'
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_81463420'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_81463420'
+Started GET "/posts/index" for ::1 at 2021-04-06 19:17:54 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/models/post.rb:10:in `liked_by?'
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_135060940'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_135060940'
+Started GET "/posts/index" for ::1 at 2021-04-06 20:55:35 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (25.2ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/models/post.rb:10:in `liked_by?'
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_135729640'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_135729640'
+Started GET "/posts/index" for ::1 at 2021-04-06 21:08:22 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (44.8ms)
+Completed 500 Internal Server Error in 196ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `liked_by?' for #<Post:0x000000000ded20f8>
+Did you mean?  like_ids):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_71588260'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_71588260'
+Started GET "/posts/index" for ::1 at 2021-04-06 21:14:43 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (358.6ms)
+Completed 500 Internal Server Error in 414ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000010ba9e00>:0x0000000010ba8460>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_140333780'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_140333780'
+Started GET "/posts/index" for ::1 at 2021-04-06 21:15:00 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (41.1ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/models/post.rb:10:in `liked_by?'
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_109924640'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_109924640'
+Started GET "/posts/index" for ::1 at 2021-04-06 21:15:11 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (39.9ms)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 6.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/models/post.rb:10:in `liked_by?'
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_108431240'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_108431240'
+Started GET "/posts/index" for ::1 at 2021-04-06 21:34:57 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered posts/index.html.erb within layouts/application (42.4ms)
+Completed 500 Internal Server Error in 137ms (ActiveRecord: 7.7ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: likes.post_id: SELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/models/post.rb:10:in `liked_by?'
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_125946280'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_125946280'
+Started GET "/posts/index" for ::1 at 2021-04-06 23:02:52 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered posts/index.html.erb within layouts/application (42.5ms)
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 5.2ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: likes.post_id: SELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/models/post.rb:10:in `liked_by?'
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_124750480'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_124750480'
+Started GET "/" for ::1 at 2021-04-07 14:49:14 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 244ms (Views: 171.1ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 14:49:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2021-04-07 14:49:18 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WF6OQj7xZ3b0UA1ul5EjDSvpbiumk3cmQx5HccK9QM1a1uXHXjumWHL8M04OqSaxjeWdVEdI1FYTCZ4KLmZ9_g", "email"=>"chirumi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "chirumi@buyed.com"], ["password", "chirumichirumi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 10ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-07 14:49:18 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (448.2ms)
+Completed 500 Internal Server Error in 505ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_user' for #<#<Class:0x0000000012125608>:0x000000001212f130>
+Did you mean?  current_cycle):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_151596800'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_151596800'
+Started GET "/posts/index" for ::1 at 2021-04-07 14:53:07 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (154.0ms)
+Completed 500 Internal Server Error in 242ms (ActiveRecord: 6.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_user' for #<PostsController:0x000000000c8fb248>):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_52637660'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_52637660'
+Started GET "/posts/index" for ::1 at 2021-04-07 14:54:35 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered posts/index.html.erb within layouts/application (63.4ms)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 7.1ms)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: likes.post_id: SELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/models/post.rb:10:in `liked_by?'
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_126431940'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_126431940'
+Started GET "/posts/index" for ::1 at 2021-04-07 14:54:40 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (66.7ms)
+Completed 500 Internal Server Error in 147ms (ActiveRecord: 4.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `liked_by?' for #<Post:0x000000000ee9f580>
+Did you mean?  like_ids):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_130356860'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_130356860'
+Started GET "/posts/index" for ::1 at 2021-04-07 15:15:53 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:8
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 4.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by?(@current_user.id) %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_135086260'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_135086260'
+Started GET "/posts/index" for ::1 at 2021-04-07 15:22:38 +0900
+  
+SyntaxError (C:/Users/1/BUYED/app/controllers/posts_controller.rb:37: syntax error, unexpected ':'
+...post.likes.where(@post.user_id: user.id).exists?
+...                              ^
+C:/Users/1/BUYED/app/controllers/posts_controller.rb:37: syntax error, unexpected ')', expecting end
+...s.where(@post.user_id: user.id).exists?
+...                              ^):
+  
+app/controllers/posts_controller.rb:37: syntax error, unexpected ':'
+app/controllers/posts_controller.rb:37: syntax error, unexpected ')', expecting end
+Started GET "/posts/index" for ::1 at 2021-04-07 17:53:03 +0900
+  
+SyntaxError (C:/Users/1/BUYED/app/controllers/posts_controller.rb:37: syntax error, unexpected ':'
+...post.likes.where(@post.user_id: @current_user.id).exists?
+...                              ^
+C:/Users/1/BUYED/app/controllers/posts_controller.rb:37: syntax error, unexpected ')', expecting end
+...post.user_id: @current_user.id).exists?
+...                              ^):
+  
+app/controllers/posts_controller.rb:37: syntax error, unexpected ':'
+app/controllers/posts_controller.rb:37: syntax error, unexpected ')', expecting end
+Started GET "/posts/index" for ::1 at 2021-04-07 17:53:46 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (34.0ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 7.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `liked_by?' for #<Post:0x000000000f9330f0>
+Did you mean?  like_ids):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if post.liked_by? %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_148992480'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_148992480'
+Started GET "/posts/index" for ::1 at 2021-04-07 17:54:36 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 193ms (Views: 129.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 17:54:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-07 17:55:32 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (9.8ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if @current_user.id == post.user_id %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_81386600'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_81386600'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:05:26 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (14.6ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 4.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if @current_user.id == post.user_id %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_132865720'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_132865720'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:19:31 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (1.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if @current_user.id == post.user_id %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_126723980'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_126723980'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:20:54 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if @current_user.id == post.user_id %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_114508660'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_114508660'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:21:00 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    37:                                             <div class="mo-someicon">
+    38:                                                     <i class="fas fa-pencil-alt fa-2x"></i>
+    39:                                                     <i class="far fa-comment fa-2x"></i>
+    40:                                                 <% if @current_user.id == post.user_id %>
+    41:                                                     <i class="far fa-heart unlike-btn fa-2x"></i>
+    42:                                                 <% else %>
+    43:                                                     <i class="far fa-heart like-btn fa-2x"></i>
+  
+app/views/posts/index.html.erb:40:in `block in _app_views_posts_index_html_erb__479550416_80823500'
+app/views/posts/index.html.erb:3:in `_app_views_posts_index_html_erb__479550416_80823500'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:21:08 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 111ms (Views: 105.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:21:09 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/logout" for ::1 at 2021-04-07 18:33:06 +0900
+Processing by UsersController#logout as HTML
+  Parameters: {"authenticity_token"=>"3Yi99R6kw2859xkYSujkZ-DUJDHZTupdS572m2EtalbfANZwfm4CQb9bJzjT0OHbRtjXTjiVSS0biS_gjfZXZQ"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2021-04-07 18:33:06 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 84ms (Views: 76.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:33:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2021-04-07 18:33:08 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"_tXLjEactFemWru3D9quyer92UFsvZ03h7XHMg7_9Er8XaAJJlZ1eSD2hZeW4qt1TPEqPo1mPkfXoh5J4iTJeQ", "email"=>"chirumi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "chirumi@buyed.com"], ["password", "chirumichirumi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-07 18:33:08 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 113ms (Views: 106.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:33:08 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-07 18:34:12 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 87ms (Views: 80.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2021-04-07 18:34:14 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tyqRG8xL_CPJG7PYpA8-IjIfZ_oe7lZ3unCkyRuTSvlTkdO6jyuwXIsJ3hPj7nRXEwrUl73q4L2M_wvRJwRDyg", "email"=>"chirumi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "chirumi@buyed.com"], ["password", "chirumichirumi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-07 18:34:14 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 87ms (Views: 80.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:34:14 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-07 18:34:17 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 71ms (Views: 65.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2021-04-07 18:34:21 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fozFT02WOFqvm-gY9-hTDUMo6UsvKRvOqzbEc7Om4TiaN4fuDvZ0Je2JhdOwCRl4Yj1aJowtrQSduWtrjzHoCw", "email"=>"chirumi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "chirumi@buyed.com"], ["password", "chirumichirumi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-07 18:34:21 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 92ms (Views: 84.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:34:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:35:13 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (42.2ms)
+Completed 500 Internal Server Error in 316ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `current_user' for #<PostsController:0x0000000010b07470>):
+    19:         <% end %>
+    20:       </div>
+    21:         <ul class="header-menu">
+    22:           <% if current_user %>
+    23:             <li>
+    24:             <%= current_user.name %>
+    25:             </li>
+  
+app/views/layouts/application.html.erb:22:in `_app_views_layouts_application_html_erb__137173303_140149580'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:35:22 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 97ms (Views: 91.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:35:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:36:01 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 134ms (Views: 128.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:36:01 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:36:06 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 106ms (Views: 99.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:36:06 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-07 18:36:09 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 74ms (Views: 68.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2021-04-07 18:36:11 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YeTXerW-3RBo8gdz-VLZa89sI-kehm_H-wsi4o9Y8sGFX5Xb9t6Rbyrgari-s5Me7nmQhL2C2Q3NhI36s8_78g", "email"=>"chirumi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "chirumi@buyed.com"], ["password", "chirumichirumi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-07 18:36:11 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 101ms (Views: 94.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:36:11 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:36:53 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 107ms (Views: 100.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:36:54 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:37:15 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 93ms (Views: 86.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:37:15 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-07 18:37:20 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 94ms (Views: 88.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2021-04-07 18:37:22 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4-BP5AGzYr-YBv6K-I2rwJH9YH1K4-m73s119y4UTOUHWw1FQtMuwNoUk0G_bOG1sOjTEOnnX3HoQtrvEoNF1g", "email"=>"chirumi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "chirumi@buyed.com"], ["password", "chirumichirumi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-07 18:37:22 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 90ms (Views: 83.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:37:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:39:24 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 140ms (Views: 107.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:39:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-07 18:39:26 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 76ms (Views: 69.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2021-04-07 18:39:29 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MNkiyz7KolRTeo2JMxlMCSo4xM6YSaKehhpCwjrpfprUYmBqfaruKxFo4EJ0-AZ8Cy13oztNFFSwle3aBn53qQ", "email"=>"chirumi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "chirumi@buyed.com"], ["password", "chirumichirumi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 8ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-07 18:39:29 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 93ms (Views: 84.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:39:29 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-07 18:44:25 +0900
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 487ms (Views: 424.6ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:44:26 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-07 18:44:28 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 76ms (Views: 69.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for ::1 at 2021-04-07 18:44:29 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cvy6O-SP1wPzaPXcGwVGMeC2iSrISzYoa4ua9YrQydfuR_iap--bfLF6mBdc5AxEwaM6R2tPgOJdBDXttkfA5A", "email"=>"chirumi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "chirumi@buyed.com"], ["password", "chirumichirumi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:37
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-07 18:44:30 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:6
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  Rendered posts/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 100ms (Views: 92.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-07 18:44:30 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
