@@ -1,11 +1,5 @@
 class PostsController < ApplicationController
 
-  before_action :set_current_user
-
-  def set_current_user
-    current_user = User.find_by(id: session[:user_id])
-  end
-
   def index
     @posts = Post.all
     @post = Post.new
@@ -36,11 +30,7 @@ class PostsController < ApplicationController
       render("/posts/new")
     end
 
-   # def liked_by?
-   #   @post = Post.find(id: params[:id])
-   #   likes = Like.all
-   #   @post.likes.where(user_id: @current_user.id).exists?
-   # end
+  
   end
 
 end
