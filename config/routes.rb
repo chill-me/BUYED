@@ -14,9 +14,12 @@ Rails.application.routes.draw do
   post "logout" => "users#logout"
   get "logout" => "users#logout"
 
+  # likes
+  resources :posts do
+  resource :likes, only: [:create, :destroy]
+  end
+
   # home
   get "/"  => "home#top"
-
-
 
 end
