@@ -6,16 +6,6 @@
                     <div class="user-name"><%= post.user.name %></div>
                          <div class="img-container" data-target="#img-modal<%= post.id %>">
                             <img class="item-img" src=<%="/post_images/#{post.post_imgname}"%> >
-                           <!-- 
-                           <div id="img-mask <%= post.id %>" class="img-mask">
-                                <d class="caption">
-                                    <p>date:</p>
-                                    <p>item-name：<%= post.item_name =%></p>
-                                    <p>price：<%= post.price %></p>
-                                    <p>satisfaction:</p>
-                                </d iv>
-                            </div> 
-                            -->
                         </div>
             </div>
 <!----------------------modal---------------------->
@@ -37,11 +27,9 @@
                                             <div class="mo-someicon">
                                                     <i class="fas fa-pencil-alt fa-2x"></i>
                                                     <i class="far fa-comment fa-2x"></i>
-                                                <% if post.liked_by?(@current_user) %>
-                                                    <i class="far fa-heart unlike-btn fa-2x"></i>
-                                                <% else %>
-                                                    <i class="far fa-heart like-btn fa-2x">likeして</i>
-                                                <% end %>
+                                                    <i id="likes_buttons_<%= post.id %>">
+                                                        <%= render partial: 'likes/like', locals: { post: post} %>
+                                                    </i>
                                             </div>
                                         </div>
                 <!--info-->
@@ -57,7 +45,7 @@
                         </div>
                     </div>
                 </div>
-<!----------------------modal---------------------->
+<!----------------------end modal---------------------->
 
         <% end %>
     </div>
@@ -85,17 +73,4 @@ document.onkeyup = function (e) {
     if(e.keyCode === 27) $('.modal').fadeOut();
 };
 
-// -----------------------------------------------------------------
-// $(document).on('turbolinks:load', function() {
-// $('.img_container').hover(
-//     function() {
-//     $($(this).data('target')).css('visibility','visible');
-//     console.log("mouse over now");
-// },
-//     function() {
-//     $($(this).data('target')).css("visibility","hidden");
-//     console.log("mouse move out now");
-//  });
-// });
-// -----------------------------------------------------------------
 </script>

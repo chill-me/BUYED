@@ -22,15 +22,13 @@ class PostsController < ApplicationController
       image = params[:image]
       File.binwrite("public/post_images/#{@post.post_imgname}", image.read)
 
-    if @post.save
-      flash[:notice] = "投稿を保存しました"
-      redirect_to("/posts/index")
-    else
-      flash[:notice] = "投稿内容に誤りがあります。"
-      render("/posts/new")
-    end
-
-  
+      if @post.save
+        flash[:notice] = "投稿を保存しました"
+        redirect_to("/posts/index")
+      else
+        flash[:notice] = "投稿内容に誤りがあります。"
+        render("/posts/new")
+      end
   end
 
 end
