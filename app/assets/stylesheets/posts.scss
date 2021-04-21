@@ -129,12 +129,12 @@ h1{
 .left-section{
     float:left;
     // background-color: rgba(140, 127, 127, 0.5);
-    width:45%;
+    width:60%;
 }
 .left-section .follow{
+    margin-left:10px;
     font-size:15px;
-    float:right;
-    display: table-cell;
+    float:left;
     vertical-align: middle;
     height:100%;
     line-height:60px;
@@ -145,7 +145,7 @@ h1{
     float:right;
     padding:8px 10px;
     // background-color: rgba(123, 96, 96, 0.5);
-    width: 50%;
+    width: 30%;
 }
 .mo-main-infocontainer{
     width:100%;
