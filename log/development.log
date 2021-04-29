@@ -58604,3 +58604,1254 @@ Processing by LikesController#create as JS
 Completed 200 OK in 23ms (Views: 11.8ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/" for ::1 at 2021-04-25 19:49:34 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ruchi/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 290ms (Views: 273.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-25 19:49:34 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-25 19:49:34 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2021-04-25 19:49:37 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YZlVdS3uZ2smPyRJ-vt3BopDSpx9Ea5umeWWVEd0evnylz_QVwPR4EYe_LuCZD6k1-kxkOc2nHKPgNLX6JwYFw", "email"=>"tomitomi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "tomitomi@buyed.com"], ["password", "tomitomi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-25 19:49:37 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (7.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (2.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.6ms)
+  Rendered posts/index.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 65ms (Views: 48.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-25 19:49:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-25 19:49:48 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-25 19:49:49 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2021-04-25 19:50:04 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BmGVXBZhlFOsnF_Sme8Ma9TEvX-8kuB9th3cwGjb1SyVb__5bIwi2My9hyDhcEXJiW7Gcya10mGgeJhDxzO3wg", "email"=>"tomitomi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Redirected to http://localhost:3000/posts/index
+Filter chain halted as :forbid_login_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-25 19:50:04 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (0.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (2.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.4ms)
+  Rendered posts/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 36ms (Views: 33.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-25 19:50:04 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/posts/6/likes" for ::1 at 2021-04-25 19:50:22 +0900
+Processing by LikesController#destroy as JS
+  Parameters: {"post_id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:10
+  [1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/likes_controller.rb:12
+  [1m[36mLike Destroy (0.4ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/likes_controller.rb:12
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/likes_controller.rb:12
+  Rendering likes/destroy.js.erb
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (2.1ms)
+  Rendered likes/destroy.js.erb (9.1ms)
+Completed 200 OK in 34ms (Views: 15.2ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/posts/6/likes" for ::1 at 2021-04-25 19:50:24 +0900
+Processing by LikesController#create as JS
+  Parameters: {"post_id"=>"6"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/likes_controller.rb:6
+  [1m[36mLike Create (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["post_id", 6], ["created_at", "2021-04-25 10:50:24.274194"], ["updated_at", "2021-04-25 10:50:24.274194"]]
+  ↳ app/controllers/likes_controller.rb:6
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/likes_controller.rb:6
+  Rendering likes/create.js.erb
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.7ms)
+  Rendered likes/create.js.erb (7.2ms)
+Completed 200 OK in 34ms (Views: 14.6ms | ActiveRecord: 5.4ms)
+
+
+Started DELETE "/posts/6/likes" for ::1 at 2021-04-25 19:50:25 +0900
+Processing by LikesController#destroy as JS
+  Parameters: {"post_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:10
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/likes_controller.rb:12
+  [1m[36mLike Destroy (0.3ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = ?[0m  [["id", 25]]
+  ↳ app/controllers/likes_controller.rb:12
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/likes_controller.rb:12
+  Rendering likes/destroy.js.erb
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (18.9ms)
+  Rendered likes/destroy.js.erb (25.7ms)
+Completed 200 OK in 40ms (Views: 30.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/posts/6/likes" for ::1 at 2021-04-25 19:50:25 +0900
+Processing by LikesController#create as JS
+  Parameters: {"post_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/likes_controller.rb:6
+  [1m[36mLike Create (0.7ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["post_id", 6], ["created_at", "2021-04-25 10:50:25.962071"], ["updated_at", "2021-04-25 10:50:25.962071"]]
+  ↳ app/controllers/likes_controller.rb:6
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/likes_controller.rb:6
+  Rendering likes/create.js.erb
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.7ms)
+  Rendered likes/create.js.erb (7.3ms)
+Completed 200 OK in 24ms (Views: 12.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-25 20:04:01 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-25 20:04:35 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-04-29 17:47:37 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ruchi/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 231ms (Views: 214.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-29 17:47:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/login" for ::1 at 2021-04-29 17:47:41 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FaD56iCehYmg9uDzao1srwMLKvks_UrN7tb6L8P5Xwyc9dcOfX_rI_w253G5LuAoJLq4ZA_IdiHfZpdQiDTMJQ", "email"=>"tomitomi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "tomitomi@buyed.com"], ["password", "tomitomi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-29 17:47:42 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (11.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (0.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.0ms)
+  Rendered posts/index.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 84ms (Views: 67.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-29 17:47:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/posts/6/likes" for ::1 at 2021-04-29 17:49:33 +0900
+Processing by LikesController#destroy as JS
+  Parameters: {"post_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:10
+  [1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:11
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/likes_controller.rb:12
+  [1m[36mLike Destroy (0.3ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = ?[0m  [["id", 26]]
+  ↳ app/controllers/likes_controller.rb:12
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/likes_controller.rb:12
+  Rendering likes/destroy.js.erb
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (2.9ms)
+  Rendered likes/destroy.js.erb (9.3ms)
+Completed 200 OK in 61ms (Views: 14.8ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/posts/6/likes" for ::1 at 2021-04-29 17:49:37 +0900
+Processing by LikesController#create as JS
+  Parameters: {"post_id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/likes_controller.rb:6
+  [1m[36mLike Create (0.4ms)[0m  [1m[32mINSERT INTO "likes" ("user_id", "post_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 3], ["post_id", 6], ["created_at", "2021-04-29 08:49:37.374910"], ["updated_at", "2021-04-29 08:49:37.374910"]]
+  ↳ app/controllers/likes_controller.rb:6
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/likes_controller.rb:6
+  Rendering likes/create.js.erb
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (2.3ms)
+  Rendered likes/create.js.erb (7.4ms)
+Completed 200 OK in 31ms (Views: 13.4ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/posts/5/likes" for ::1 at 2021-04-29 17:49:40 +0900
+Processing by LikesController#destroy as JS
+  Parameters: {"post_id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:10
+  [1m[36mLike Load (0.1ms)[0m  [1m[34mSELECT  "likes".* FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/likes_controller.rb:11
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/likes_controller.rb:12
+  [1m[36mLike Destroy (0.5ms)[0m  [1m[31mDELETE FROM "likes" WHERE "likes"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/likes_controller.rb:12
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/likes_controller.rb:12
+  Rendering likes/destroy.js.erb
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.9ms)
+  Rendered likes/destroy.js.erb (6.2ms)
+Completed 200 OK in 23ms (Views: 11.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-29 18:17:58 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRelationships (20210429091955)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20210429091955_create_relationships.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "relationships" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210429091955_create_relationships.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210429091955"]]
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRelationships (20210429091955)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRelationships (20210429091955)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRelationships (20210429091955)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRelationships (20210429091955)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRelationships (20210429091955)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE "relationships"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20210429091955"]]
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateRelationships (20210429091955)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20210429091955_create_relationships.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "relationships" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "follower_id" integer, "following_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_8c9a6d4759"
+FOREIGN KEY ("follower_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_99bf6afbfa"
+FOREIGN KEY ("following_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20210429091955_create_relationships.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_relationships_on_follower_id" ON "relationships" ("follower_id")[0m
+  ↳ db/migrate/20210429091955_create_relationships.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_relationships_on_following_id" ON "relationships" ("following_id")[0m
+  ↳ db/migrate/20210429091955_create_relationships.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_relationships_on_follower_id_and_following_id" ON "relationships" ("follower_id", "following_id")[0m
+  ↳ db/migrate/20210429091955_create_relationships.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210429091955"]]
+  ↳ bin/rails:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/posts/index" for ::1 at 2021-04-29 18:33:05 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ruchi/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/activerecord-5.2.5/lib/active_record/log_subscriber.rb:98
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (8.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.6ms)
+  Rendered posts/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 99ms (Views: 69.3ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-29 18:33:05 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-29 18:41:13 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (6.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.0ms)
+  Rendered posts/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 76ms (Views: 48.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/posts/path/to/font-awesome/css/font-awesome.min.css" for ::1 at 2021-04-29 18:41:13 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/posts/path/to/font-awesome/css/font-awesome.min.css"):
+  
+actionpack (5.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/posts/index" for ::1 at 2021-04-29 18:42:15 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.8ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.3ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.4ms)
+  Rendered posts/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-29 18:52:31 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (5.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.4ms)
+  Rendered posts/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 84ms (Views: 56.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 18:52:53 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 49ms (Views: 39.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for ::1 at 2021-04-29 18:52:56 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"-gwsrYTv59Lles2owYA9-esP1uIo-oRMgaKSenMYoQurF5BPW0loujxBdS-dTZUE_w8j8hzPIVxEUgiR39lQbQ", "email"=>"tomitomi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Redirected to http://localhost:3000/posts/index
+Filter chain halted as :forbid_login_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-29 18:52:56 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (3.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.2ms)
+  Rendered posts/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/logout" for ::1 at 2021-04-29 18:53:00 +0900
+Processing by UsersController#logout as HTML
+  Parameters: {"authenticity_token"=>"pwGJ8esXAPcWFbUYu09R-ngkBIkFMoOXtjBESYW8V_UuVKcVtvZuXUrVsppo7N19X5WWFCYHv3uHgCk2znHE3A"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 18:53:00 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2021-04-29 18:53:04 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1fglvsq0P1quyhS5UJKf_To-sis7XHfJT-wJmYhhyE9crQtal1VR8PIKEzuDMRN6HY8gthhpSyV-XGTmw6xbZg", "email"=>"tomitomi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "tomitomi@buyed.com"], ["password", "tomitomi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-29 18:53:04 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.0ms)
+  Rendered posts/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 36ms (Views: 32.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/logout" for ::1 at 2021-04-29 18:53:07 +0900
+Processing by UsersController#logout as HTML
+  Parameters: {"authenticity_token"=>"zukXWXRoFczRBNyzooE84CAMy82U1mGS-dKX0-MKbEVHvDm9KYl7Zo3E2zFxIrBnB71ZULfjXX7IYvqsqMf_bA"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 18:53:07 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 18:53:47 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 65ms (Views: 63.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2021-04-29 18:53:54 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6aq207l7RXjr4LwPoQPuH1iwgvk99SLrXQqMLL-i8q24sQoxZt3KEDLbBIj9zkbiTLB36QnAh_uY-hbHE2MDyw", "email"=>"tomitomi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "tomitomi@buyed.com"], ["password", "tomitomi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-29 18:53:54 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.4ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.2ms)
+  Rendered posts/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 35ms (Views: 31.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-29 18:54:07 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (0.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (0.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.1ms)
+  Rendered posts/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 33ms (Views: 29.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-29 18:54:25 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.2ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.0ms)
+  Rendered posts/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 36ms (Views: 32.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/logout" for ::1 at 2021-04-29 18:54:28 +0900
+Processing by UsersController#logout as HTML
+  Parameters: {"authenticity_token"=>"uv__Dn_shYq1cjinuT4cah9HNevwj2cN82ylCuEVz6ozqtHqIg3rIOmyPyVqnZDtOPandtO6W-HC3Mh1qthcgw"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2021-04-29 18:54:28 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2021-04-29 18:54:31 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1OlkrvTF0jowxyba9WDYVxuRqz2N84fTUOBtVWKQk4ldvEpKqSS8kGwHIVgmw1TQPCA5oK7Guz9hUAAqKV0AoA", "email"=>"tomitomi@buyed.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? AND "users"."password" = ? LIMIT ?[0m  [["email", "tomitomi@buyed.com"], ["password", "tomitomi"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:41
+Redirected to http://localhost:3000/posts/index
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/index" for ::1 at 2021-04-29 18:54:31 +0900
+Processing by PostsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/posts/index.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 1], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 4], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 5], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (0.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:6
+  [1m[36mLike Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "likes" WHERE "likes"."post_id" = ? AND "likes"."user_id" = ? LIMIT ?[0m  [["post_id", 6], ["user_id", 3], ["LIMIT", 1]]
+  ↳ app/models/post.rb:10
+  Rendered likes/_like.html.erb (1.0ms)
+  Rendered posts/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 1.0ms)
+
+

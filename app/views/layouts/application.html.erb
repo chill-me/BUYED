@@ -7,7 +7,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
 
   </head>
@@ -21,9 +20,9 @@
         <ul class="header-menu">
           <% if @current_user %>
             <li>
-            <%= @current_user.name %>
+            <%= @current_user.name %>さん
           <% else %>
-          ログインなし
+          ログインしていません…
             </li>
           <% end %>
             <li>
