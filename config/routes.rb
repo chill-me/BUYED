@@ -26,8 +26,6 @@ Rails.application.routes.draw do
   resource :likes, only: [:create, :destroy]
   end
 
-  
-
   # home
   get "/"  => "home#top"
 

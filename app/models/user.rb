@@ -23,16 +23,4 @@ class User < ApplicationRecord
         self.following_relationships.find_by(following_id: other_user.id).destroy
     end
 
-    def followings
-        @user = User.find(params[:id])
-        @users = @user.followings.page(params[:page]).per(10)
-        render "show_followings"
-    end
-      
-    def followers
-        @user = User.find(params[:id])
-        @users = @user.followers.page(params[:page]).per(10)
-        render "show_followers"
-    end
-
 end

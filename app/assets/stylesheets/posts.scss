@@ -123,6 +123,11 @@ h1{
 .mo-someicon .like-btn{
     color:black;
 }
+.mo-someicon .likes_count{
+    font-size: 3px;
+    float: right;
+    line-height: 40px;
+}
 .mo-someicon i{
     padding:5px 1px;
 }
@@ -145,7 +150,7 @@ h1{
     float:right;
     padding:8px 10px;
     // background-color: rgba(123, 96, 96, 0.5);
-    width: 30%;
+    width: 35%;
 }
 .mo-main-infocontainer{
     width:100%;

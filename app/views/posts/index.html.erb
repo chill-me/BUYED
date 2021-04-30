@@ -21,15 +21,19 @@
                                     <div class="left-section">
                                         <img class="mo-user-icon" src="/default-user-icon.png">
                                         <div class="mo-user-name"><%= post.user.name %></div>
-                                        <div class="follow">フォローする</div>
+                                        <% if @current_user && post.user != @current_user %>
+                                            <div id="follow_buttons_<%= post.user.id %>">
+                                                <%= render partial: 'posts/user_follow', locals: {post: post} %>
+                                            </div>
+                                        <% end %>
                                     </div>
                                     <div class="right-section">
                                         <div class="mo-someicon">
-                                                <i class="fas fa-pencil-alt fa-2x"></i>
-                                                <i class="far fa-comment fa-2x"></i>
-                                                <i id="likes_buttons_<%= post.id %>">
-                                                    <%= render partial: 'likes/like', locals: {post: post} %>
-                                                </i>
+                                            <i class="fas fa-pencil-alt fa-2x"></i>
+                                            <i class="far fa-comment fa-2x"></i>
+                                            <i id="likes_buttons_<%= post.id %>">
+                                                <%= render partial: 'likes/like', locals: {post: post} %>
+                                            </i>
                                         </div>
                                         </div>
                 <!--info-->
