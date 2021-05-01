@@ -8,15 +8,15 @@
             <%= @error_message %>
           </div>
             <% end %>
-        <%= form_tag("/posts/create", {multipart: true}) do %>
-          <p>item_name</p>
-          <input name="item_name" value="<%= @post.item_name %>">
+        <%= form_with(model: @post , multipart: true) do |f| %>
           <p>image</p>
           <input name="image" type="file">
-          <p>price</p>
-          <input name="price" class="price" value="<%= @post.price %>">円
+          <p>item_name</p>
+          <%= f.text_field :item_name %>
+          <p>Price</p>
+          <%= f.text_field :price, class: 'price' %>円
           <p>Comment</p>
-          <textarea name="comment"><%= @post.comment %></textarea>
+          <%= f.text_area :comment %>
           <input type="submit" value="保存">
         <% end %>
         </div>
