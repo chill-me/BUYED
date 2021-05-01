@@ -1,1 +1,1 @@
-$("#follow_buttons_<%= post.user.id %>").html("<%= j(render partial: 'posts/user_follow', locals: { post: @post }) %>");
+$("#follow_buttons_<%= @user.id %>").html("<%= j(render partial: 'posts/user_follow', locals: { user: @user }) %>");

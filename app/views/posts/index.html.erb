@@ -59,16 +59,16 @@
 
 $('.img-container').click(function(e) {
     $($(this).data('target')).fadeIn();
-    console.log("click on");
+    // console.log("click on");
     e.stopPropagation();
 });
 
 $(document).on('click', function(e) {
     if (!$(e.target).closest($('.modal-content')).length) {
-        console.log("out of modal");
+        // console.log("out of modal");
         $('.modal').fadeOut();
     }else{
-        console.log("in modal");
+        // console.log("in modal");
     };
 });
 
