@@ -1,9 +1,9 @@
-<% if @current_user.following?(post.user) %>
-    <%= link_to followings_path(post.user.id), method: :delete, remote: true do %>
+<% if @current_user.following?(user) %>
+    <%= link_to relationship_path(user.id), method: :delete, remote: true do %>
         <div id="Unfollow" class="follow">フォロー中</div>
     <% end %>
 <% else %>
-    <%= link_to followings_path(post.user.id), method: :post, remote: true do %>
+    <%= link_to relationship_path(user.id), method: :post, remote: true do %>
         <div id="follow" class="follow">フォローする</div>
     <% end %>
 <% end %>
