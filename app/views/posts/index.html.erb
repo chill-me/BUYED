@@ -4,77 +4,34 @@
             <div class="posts-main-container">
                 <img class="user-icon" src="/default-user-icon.png">
                     <div class="user-name"><%= post.user.name %></div>
-                         <div class="img-container" data-target="#img-modal<%= post.id %>">
-                            <img class="item-img" src=<%="/post_images/#{post.post_imgname}"%> >
+                         <div class="img-container"　id="img_container_<%= post.id %>">
+                            <%= link_to image_tag("/post_images/#{post.post_imgname}" , class: "item-img"), post_path(post.id), remote: true %>
                         </div>
             </div>
-<!----------------------modal---------------------->
-                <div id="img-modal<%= post.id %>" class="modal">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                <!--modal left-->
-                            <div class="modal-left-info">
-                                <img class="modal-img" src=<%="/post_images/#{post.post_imgname}"%>>
-                            </div>
-                <!--modal right-->
-                                <div class="modal-right-info">
-                                    <div class="left-section">
-                                        <img class="mo-user-icon" src="/default-user-icon.png">
-                                        <div class="mo-user-name"><%= post.user.name %></div>
-                                        <% if @current_user && post.user != @current_user %>
-                                            <div id="follow_buttons_<%= post.user.id %>">
-                                                <%= render partial: 'posts/user_follow', locals: {user: post.user} %>
-                                            </div>
-                                        <% end %>
-                                    </div>
-                                    <div class="right-section">
-                                        <div class="mo-someicon">
-                                            <i class="fas fa-pencil-alt fa-2x"></i>
-                                            <i class="far fa-comment fa-2x"></i>
-                                            <i id="likes_buttons_<%= post.id %>">
-                                                <%= render partial: 'likes/like', locals: {post: post} %>
-                                            </i>
-                                        </div>
-                                        </div>
-                <!--info-->
-                                        <div class="mo-main-infocontainer">
-                                            <p><i class="fa fa-tags"></i></p>
-                                            <p><i class="far fa-clock"></i><%= post.created_at =%></p>
-                                            <p><i class="fa fa-shopping-bag"></i><%= post.item_name =%></p>
-                                            <p><i class="fa fa-money"></i>¥<%= post.price %></p>
-                                            <p><i class="fa fa-star-half-empty"></i></p>
-                                            <p><i class="fa fa-pencil-square-o"></i></p>
-                                        </div>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-<!----------------------end modal---------------------->
-
         <% end %>
     </div>
 </div>
 
 <script>
 
-$('.img-container').click(function(e) {
-    $($(this).data('target')).fadeIn();
-    // console.log("click on");
-    e.stopPropagation();
-});
+// $('.img-container').click(function(e) {
+//     $($(this).data('target')).fadeIn();
+//     // console.log("click on");
+//     e.stopPropagation();
+// });
 
-$(document).on('click', function(e) {
-    if (!$(e.target).closest($('.modal-content')).length) {
-        // console.log("out of modal");
-        $('.modal').fadeOut();
-    }else{
-        // console.log("in modal");
-    };
-});
+// $(document).on('click', function(e) {
+//     if (!$(e.target).closest($('.modal-content')).length) {
+//         // console.log("out of modal");
+//         $('.modal').fadeOut();
+//     }else{
+//         // console.log("in modal");
+//     };
+// });
 
-document.onkeyup = function (e) {
-    e = e || window.event;
-    if(e.keyCode === 27) $('.modal').fadeOut();
-};
+// document.onkeyup = function (e) {
+//     e = e || window.event;
+//     if(e.keyCode === 27) $('.modal').fadeOut();
+// };
 
 </script>

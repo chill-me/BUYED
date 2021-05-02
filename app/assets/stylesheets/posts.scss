@@ -60,7 +60,6 @@ h1{
 //---------------modal---------------
 
 .modal {
-    vertical-align:top;
     position: absolute;
     z-index: 2;
     left: 0;
@@ -69,7 +68,7 @@ h1{
     width: 100%;
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
-    display: none;
+    display: block;
 }
 .modal-content{
     background-color: white;

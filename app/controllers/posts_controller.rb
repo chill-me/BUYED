@@ -26,13 +26,21 @@ class PostsController < ApplicationController
     end
   end
 
-  private
-    def post_params #post_paramsの定義（ないとエラーになる）
-      params.require(:post).permit(
-        :item_name,
-        :price,
-        :comment,
-      )
+  def show
+    @post = Post.find(params[:id])
+    respond_to do |format|
+      format.html {redirect_back(fallback_location: posts_path)}
+      format.js
     end
+  end 
+
+  private
+  def post_params #post_paramsの定義（ないとエラーになる）
+    params.require(:post).permit(
+      :item_name,
+      :price,
+      :comment,
+    )
+  end
 
 end
