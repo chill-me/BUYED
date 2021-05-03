@@ -8,12 +8,10 @@
                             <%= link_to image_tag("/post_images/#{post.post_imgname}" , class: "item-img"), post_path(post.id), remote: true %>
                         </div>
             </div>
-            <div id="modal_<%= post.id %>">
-            </div>
         <% end %>
     </div>
 </div>
-
+<div id="modal"></div>
 <script>
 
 // $('.img-container').click(function(e) {
@@ -25,7 +23,7 @@
 $(document).on('click', function(e) {
     if (!$(e.target).closest($('.modal-content')).length) {
         console.log("out of modal");
-        $('.modal').remove();
+        $('.modal').fadeOut();
     }else{
         console.log("in modal");
     };
@@ -33,7 +31,7 @@ $(document).on('click', function(e) {
 
 document.onkeyup = function (e) {
     e = e || window.event;
-    if(e.keyCode === 27) $('.modal').remove();
+    if(e.keyCode === 27) $('.modal').fadeOut();
 };
 
 </script>
