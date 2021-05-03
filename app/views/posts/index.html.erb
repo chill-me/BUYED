@@ -4,9 +4,11 @@
             <div class="posts-main-container">
                 <img class="user-icon" src="/default-user-icon.png">
                     <div class="user-name"><%= post.user.name %></div>
-                         <div class="img-container"　id="img_container_<%= post.id %>">
+                         <div class="img-container" id="img_container_<%= post.id %>">
                             <%= link_to image_tag("/post_images/#{post.post_imgname}" , class: "item-img"), post_path(post.id), remote: true %>
                         </div>
+            </div>
+            <div id="modal_<%= post.id %>">
             </div>
         <% end %>
     </div>
@@ -20,18 +22,18 @@
 //     e.stopPropagation();
 // });
 
-// $(document).on('click', function(e) {
-//     if (!$(e.target).closest($('.modal-content')).length) {
-//         // console.log("out of modal");
-//         $('.modal').fadeOut();
-//     }else{
-//         // console.log("in modal");
-//     };
-// });
+$(document).on('click', function(e) {
+    if (!$(e.target).closest($('.modal-content')).length) {
+        console.log("out of modal");
+        $('.modal').remove();
+    }else{
+        console.log("in modal");
+    };
+});
 
-// document.onkeyup = function (e) {
-//     e = e || window.event;
-//     if(e.keyCode === 27) $('.modal').fadeOut();
-// };
+document.onkeyup = function (e) {
+    e = e || window.event;
+    if(e.keyCode === 27) $('.modal').remove();
+};
 
 </script>
