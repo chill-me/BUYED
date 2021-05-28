@@ -1,0 +1,44 @@
+<div id="img-modal<%= post.id %>" class="modal">
+    <div class="modal-content">
+        <div class="modal-body">
+<!--modal left-->
+            <div class="modal-left-info">
+                <img class="modal-img" src=<%="/post_images/#{post.post_imgname}"%>>
+            </div>
+<!--modal right-->
+            <div class="modal-right-info">
+                <div class="left-section">
+                    <img class="mo-user-icon" src="/default-user-icon.png">
+                    <div class="mo-user-name"><%= post.user.name %></div>
+<% if @current_user && post.user != @current_user %>
+                    <div id="follow_buttons_<%= post.user.id %>" class="follow-btn">
+                        <%= render partial: 'posts/user_follow', locals: {user: post.user} %>
+                    </div>
+<% end %>
+                </div>
+                <div class="right-section">
+                    <div class="mo-someicon">
+<% if @current_user && post.user == @current_user %>
+                        <%= link_to edit_post_path(post.id), remote: true do %>
+                            <i class="fas fa-pencil-alt fa-2x" id=""></i>
+                        <% end %>
+<% end %>
+                        <i class="far fa-comment fa-2x"></i>
+                        <i id="likes_buttons_<%= post.id %>">
+                            <%= render partial: 'likes/like', locals: {post: post} %>
+                        </i>
+                    </div>
+                </div>
+<!--info-->
+                <div class="mo-main-infocontainer">
+                    <i class="fa fa-tags"></i></p>
+                    <i class="far fa-clock"></i><%= post.created_at =%></p>
+                    <i class="fa fa-shopping-bag"></i><%= post.item_name =%></p>
+                    <i class="fa fa-money"></i><%= post.price %></p>
+                    <i class="fa fa-star-half-empty"></i></p>
+                    <i class="fa fa-pencil-square-o"></i><p><%= post.comment %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

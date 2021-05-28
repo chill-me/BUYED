@@ -26,6 +26,14 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    @post = Post.find(params[:id])
+    respond_to do |format|
+      format.html {redirect_back(fallback_location: posts_path)}
+      format.js
+    end  
+  end
+
   def show
     @post = Post.find(params[:id])
     respond_to do |format|
