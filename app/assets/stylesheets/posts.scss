@@ -59,6 +59,9 @@ h1{
 }
 //---------------modal---------------
 
+.fas {
+    text-decoration: none;
+}
 .modal {
     position: absolute;
     z-index: 2;
@@ -116,6 +119,9 @@ h1{
     float:right;
     height:40px;
 }
+.mo-someicon a{
+    text-decoration-line: none;
+}
 .mo-someicon .unlike-btn{
     color:red;
 }
@@ -130,6 +136,12 @@ h1{
 .mo-someicon i{
     padding:5px 1px;
 }
+
+.fa-pencil-alt:before {
+    text-decoration: none;
+    color:black;
+}
+
 .left-section{
     float:left;
     // background-color: rgba(140, 127, 127, 0.5);
