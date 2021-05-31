@@ -16,27 +16,19 @@
                     </div>
 <% end %>
                 </div>
-                <div class="right-section">
-                    <div class="mo-someicon">
-<% if @current_user && post.user == @current_user %>
-                        <%= link_to edit_post_path(post.id), remote: true do %>
-                            <i class="fas fa-pencil-alt fa-2x" id=""></i>
-                        <% end %>
-<% end %>
-                        <i class="far fa-comment fa-2x"></i>
-                        <i id="likes_buttons_<%= post.id %>">
-                            <%= render partial: 'likes/like', locals: {post: post} %>
-                        </i>
-                    </div>
-                </div>
+<%= form_with model: post do |form| %>
+                <div class="right-section"></div>
+                <%= form.submit "更新"%>
+
 <!--info-->
                 <div class="mo-main-infocontainer">
                     <i class="fa fa-tags"></i></p>
                     <i class="far fa-clock"></i><%= post.created_at =%></p>
-                    <i class="fa fa-shopping-bag"></i><%= post.item_name =%></p>
-                    <i class="fa fa-money"></i><%= post.price %></p>
+                    <i class="fa fa-shopping-bag"></i><%= form.text_field :item_name %></p>
+                    <i class="fa fa-money"></i><i class="fa fa-jpy"></i><%= form.text_field :price %></p>
                     <i class="fa fa-star-half-empty"></i></p>
-                    <i class="fa fa-pencil-square-o"></i><p><%= post.comment %></p>
+                    <i class="fa fa-pencil-square-o"></i><%= form.text_area :comment %></p>
+<% end %>
                 </div>
             </div>
         </div>
