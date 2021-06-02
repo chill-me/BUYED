@@ -19,9 +19,11 @@
 <%= form_with model: post do |form| %>
                 <div class="right-section"></div>
                 <%= form.submit "更新"%>
+                <%= form.submit "削除"%>
+
 
 <!--info-->
-                <div class="mo-main-infocontainer">
+                <div class="mo-main-infocontainer-edit">
                     <i class="fa fa-tags"></i></p>
                     <i class="far fa-clock"></i><%= post.created_at =%></p>
                     <i class="fa fa-shopping-bag"></i><%= form.text_field :item_name %></p>
