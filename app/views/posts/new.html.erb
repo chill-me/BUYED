@@ -8,17 +8,19 @@
             <%= @error_message %>
           </div>
             <% end %>
-        <%= form_with(model: @post , multipart: true) do |f| %>
-          <p>image</p>
-          <input name="image" type="file">
-          <p>item_name</p>
-          <%= f.text_field :item_name %>
-          <p>Price</p>
-          <%= f.text_field :price, class: 'price' %>円
-          <p>Comment</p>
-          <%= f.text_area :comment %>
-          <input type="submit" value="保存">
-        <% end %>
+              <%= form_with model: @post , multipart: true do |f| %>
+                <p>image</p>
+                  <input name="image" type="file">
+                <p>item_name</p>
+                  <%= f.text_field :item_name %>
+                <p>Price</p>
+                  <%= f.text_field :price, class: 'price' %>円
+                <p>Comment</p>
+                  <%= f.text_area :comment %>
+                <p>Tag</p>
+                  <%= f.text_field :tag_ids, placeholder: "タグを付けましょう！複数つけるには','で区切ってください。" %>
+                <input type="submit" value="投稿">
+              <% end %>
         </div>
       </div>
   </div>
