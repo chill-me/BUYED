@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :posts
+  root "users#login"
+  
   # posts
   post "posts/create" => "posts#create" 
   get "posts/index" => "posts#index"

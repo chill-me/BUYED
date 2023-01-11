@@ -4,14 +4,15 @@
             <div class="posts-main-container">
                 <img class="user-icon" src="/default-user-icon.png">
                 <div class="user-name"><%= post.user.name %></div>
-                <div class="img-container" id="img_container_<%= post.id %>">
-                    <%= link_to image_tag("/post_images/#{post.post_imgname}" , class: "item-img"), post_path(post.id), remote: true %>
-                </div>
-            </div>
+                    <div class="img-container" id="img_container_<%= post.id %>">
+                        <%= link_to image_tag("/post_images/#{post.post_imgname}" , class: "item-img"), post_path(post.id), remote: true %>
+                    </div>
+                 </div>
         <% end %>
     </div>
 </div>
 <div id="modal"></div>
+//modal script
 <script>
 
 $(document).on('click', function(e) {

@@ -146,6 +146,7 @@ GEM
     nokogiri (1.13.10-x64-mingw-ucrt)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pg (1.4.5-x64-mingw-ucrt)
     public_suffix (5.0.1)
     puma (3.12.6)
     racc (1.6.2)
@@ -252,6 +253,7 @@ DEPENDENCIES
   duktape
   jbuilder (~> 2.5)
   jquery-rails
+  pg
   puma (~> 3.11)
   rails (= 7.0.3)
   sass-rails (~> 5.0)

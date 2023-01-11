@@ -167,9 +167,10 @@ html {
         font-size: 16px;
         animation-name: fade-in-flash; 
         animation-duration: 4s;
-        animation-timing-function: ease-in-out; //easeよりスロー
+        animation-timing-function: ease-in-out; //Slow Than ease
 
   }
+
   @keyframes fade-in-flash {
     from {
       opacity: 1;
