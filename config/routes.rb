@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  # home
+  get "/"  => "home#top"
+
   # posts
   post "posts/create" => "posts#create" 
   get "posts/index" => "posts#index"
@@ -10,6 +14,7 @@ Rails.application.routes.draw do
   get "users/create" => "users#create"
   post "users/create" => "users#create"
   get "users/index" => "users#index"
+  get "login" => "home#top"
   post "login" => "users#login"
   post "logout" => "users#logout"
   get "logout" => "users#logout"
@@ -25,8 +30,5 @@ Rails.application.routes.draw do
   resources :posts do
   resource :likes, only: [:create, :destroy]
   end
-
-  # home
-  get "/"  => "home#top"
 
 end
